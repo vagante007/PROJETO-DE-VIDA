@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;700&display=swap');
-
 :root {
     --cor-de-fundo: #1E1E1E;
     --verde: #6FFF57;
@@ -8,13 +7,11 @@
     --botao-inativo: rgba(58, 55, 94, 0.5);
     --texto-fundo: rgba(58, 55, 94, 0.3);
 }
-
 body {
     background-color: var(--cor-de-fundo);
     color: var(--branco);
     font-family: 'Chakra Petch', sans-serif;
 }
-
 .conteudo-principal {
     display: flex;
     flex-direction: column;
@@ -49,15 +46,32 @@ body {
     border-right: 2px solid var(--botao-ativo); 
     border-top: none;
 }
-
 .botoes {
     display: block;
+}
+
+.botao:first-child {
+    border-radius: 40px 40px 0 0;
+}
+@media screen and (min-width: 768px) {
+    .botoes {
+        display: flex;
+    }
+
+    .botao:first-child {
+        border-radius: 40px 0 0 0;
+    }
+
+    .botao:last-child {
+        border-radius: 0 40px 0 0;
+    }
 }
 
 .botao.ativo{
     background-color: var(--botao-ativo);
     border-bottom: 4px solid var(--verde);
 }
+
 
 .abas-textos{
     background-color: var(--texto-fundo);
@@ -79,68 +93,30 @@ body {
     color: var(--verde);
     text-transform: uppercase;
 }
+.contador{
+    display: flex;
+    font-size: 30px;
+    text-align: center;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-@media screen and (min-width: 768px) {
-    .botoes {
-        display: flex;
-    }
 }
-   .botao:first-child {
-        border-radius: 40px 40px 0 0;
-}    
-@media screen and (min-width: 768px) {
-        .botoes {
-            display: flex;
-        }
-    
-        .botao:first-child {
-            border-radius: 40px 0 0 0;
-        }
-    
-        .botao:last-child {
-            border-radius: 0 40px 0 0;
-        }
-    }   
+.contador{
+    display:flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.contador-digito{
+    padding: 0 16px;
+    text-align: center;
+    min-width: 100px;
+}
+.contador-digito-numero{
+    font-size: 80px;
+    margin: 0;
+}
+.contador-digito-texto{
+    color: var(--verde);
+    font-size: 20px;
+    margin: 0;
+}
+
+
